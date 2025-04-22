@@ -1,0 +1,21 @@
+---
+// src/components/ProductSliderWrapper.astro
+---
+<div id="elm-slider" style="width:100%; max-width:48rem; margin:0 auto;"></div>
+
+<!-- 1) Load Elm as a plain script, client‑only -->
+<script src="/elm.js" client:load></script>
+
+<!-- 2) Once elm.js is parsed, initialize your app -->
+<script client:load>
+  // Wait one tick just in case
+  setTimeout(() => {
+    if (window.Elm && Elm.ProductSlider) {
+      Elm.ProductSlider.init({
+        node: document.getElementById("elm-slider")
+      });
+    } else {
+      console.error("❌ Elm or Elm.ProductSlider not found:", window.Elm);
+    }
+  }, 0);
+</script>

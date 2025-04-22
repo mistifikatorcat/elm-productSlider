@@ -6,7 +6,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "build:elm": "cd src/elm && elm make ProductSlider.elm --output ../..//public/elm.js",
+    "watch:elm": "elm-watch src/elm/ProductSlider.elm --output public/elm.js" 
   },
   "dependencies": {
     "astro": "^5.7.4"

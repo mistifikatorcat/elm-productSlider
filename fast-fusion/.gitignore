@@ -3,6 +3,9 @@ dist/
 # generated types
 .astro/
 
+# Elm
+/src/elm/elm-stuff/
+
 # dependencies
 node_modules/
 
